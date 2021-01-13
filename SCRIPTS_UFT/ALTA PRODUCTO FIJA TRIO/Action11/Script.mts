@@ -28,18 +28,18 @@ str_Categoria		= 	DataTable("e_Categoria", dtLocalSheet)
 str_paquete_tv		=   DataTable("e_PaqueteTV", dtLocalSheet)
 Num_Iter 			= 	Environment.Value("ActionIteration")
  
-Call SeleccionarTipoAlta()
-Call FlujoWIC()
+'Call SeleccionarTipoAlta()
+'Call FlujoWIC()
 Call Direccion()
 Call SeleccionarPlanTarifario()
 Call ParametrosAlta()
 Call RecursosAltas()
 Call NegociarVisita()
 Call NegociarDistribucion()
-'Call GeneracionOrden()
+Call GeneracionOrden()
 '''Si falla la WIC2, habilitar los siguientes 2 "CALL" y comentar Call GeneracionOrden()
-Call InspectorSmart()
-Call EnviarOrden()
+'Call InspectorSmart()
+'Call EnviarOrden()
 
 Sub SeleccionarTipoAlta()
 'Buscar Cliente
@@ -758,9 +758,9 @@ End Sub
 
 Sub CuandoFallaWIC2_Guardar()
 	'Cuando falla la wic2
-'	Dim x1
-'	x1 = "¡RECORDATORIO! GUARDAR"
-'	MsgBox x1
+'	Dim x11
+'	x11 = "¡RECORDATORIO! GUARDAR"
+'	MsgBox x11
 		'flujo para guardar
 	JavaWindow("Ejecutivo de interacción").JavaInternalFrame("Resumen de la orden (Orden").JavaButton("Guardar").Click
 	Call Carga()

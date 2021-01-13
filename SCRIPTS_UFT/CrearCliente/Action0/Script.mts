@@ -1,3 +1,3 @@
 ﻿RunAction "Login", oneIteration
-RunAction "CrearCliente", "3 - 4"
+RunAction "CrearCliente", allIterations
 RunAction "Log_Out", oneIteration
